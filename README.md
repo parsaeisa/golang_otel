@@ -2,7 +2,7 @@
 
 Here you can see my practice for open telemetry in golang . 
 this is an example of nested span between server and client 
-
+In this case we have grpc server and client . 
 ```go
 package cmd
 
@@ -21,10 +21,6 @@ import (
 	semconv "go.opentelemetry.io/otel/semconv/v1.7.0"
 	"go.uber.org/zap"
 	"google.golang.org/grpc/metadata"
-
-	kangaroo "gitlab.snapp.ir/drx/sample/internal/grpc/proto"
-	"gitlab.snapp.ir/drx/sample/internal/log"
-	client "gitlab.snapp.ir/drx/sample/pkg/client"
 )
 
 var grpcClientCmd = &cobra.Command{

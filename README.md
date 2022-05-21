@@ -1,4 +1,4 @@
-# grpc_otel
+# golang_otel
 
 Here you can see my practice for open telemetry in golang . 
 this is an example of nested span between server and client 

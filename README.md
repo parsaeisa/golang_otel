@@ -99,3 +99,15 @@ func runClient(_ *cobra.Command, _ []string) {
 }
 
 ```
+
+We have something like http middleware called interceptor in open telemetry . 
+For each server and client we have two kinds of interceptor , 
+* Unary
+* Stream
+
+So we have 4 methods : 
+* UnaryClientInterceptor
+* StreamClientInterceptor
+
+* UnaryServerInterceptor
+* StreamServerInterceptor

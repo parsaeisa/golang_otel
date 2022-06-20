@@ -15,7 +15,9 @@ in this stage you should define :
 
 ## monitoring 
 For monitoring you should get a tracer from otel.GetTracerProvider().Tracer(app.Name)
+
 It returns the tracer that you set in setup stage ( in app directory ) 
+
 Then you define a span , with tracer.start() method . You give it a name and defer its cleaning method . 
 
 ```go

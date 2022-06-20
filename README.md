@@ -3,6 +3,21 @@
 Here you can see my practice for open telemetry in golang . 
 this is an example of nested span between server and client 
 In this case we have grpc server and client . 
+
+this program has some parts : 
++ setup 
++ monitoring 
+
+## setup
+in this stage you should define :
++ jeager agent 
++ trace provider
+
+## monitoring 
+For monitoring you should get a tracer from otel.GetTracerProvider().Tracer(app.Name)
+It returns the tracer that you set in setup stage ( in app directory ) 
+Then you define a span , with tracer.start() method . You give it a name and defer its cleaning method . 
+
 ```go
 package cmd
 

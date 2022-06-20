@@ -2,7 +2,7 @@
 
 Here you can see my practice for open telemetry in golang . 
 this is an example of nested span between server and client 
-In this case we have grpc server and client . 
+/ In this case we have grpc server and client . 
 
 this program has some parts : 
 + setup 

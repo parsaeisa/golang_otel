@@ -141,13 +141,13 @@ So we have 4 methods :
 
 Its so simple to use otel in repositories . ( like redis and sqlx ) 
 ## Redis 
-All you need to do is below line : 
+All you need to do is below line after defining redis client  : 
 ```go
 a.RedisClient.AddHook(redisotel.NewTracingHook())
 ```
 
 ## Database 
-And for database : 
+And for database , while defining it you should use below method instead of sqlx : 
 ```go
 db, err = otelsqlx.Open(config.C.Database.Driver, config.C.Database.DSN(), otelsql.WithAttributes(semconv.DBSystemMariaDB))
 if err != nil {

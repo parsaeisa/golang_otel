@@ -154,3 +154,6 @@ if err != nil {
 	log.Fatalf("Cannot open database %s: %s", config.C.Database.String(), err)
 }
 ```
+
+
+These lines trace all of your commands on database and redis . 

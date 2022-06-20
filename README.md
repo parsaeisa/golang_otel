@@ -12,7 +12,7 @@ this program has some parts :
 in this stage you should define :
 + jeager agent 
 + trace provider
-
+and we should register our provider with otel.SetTracerProvider() method . 
 ## monitoring 
 For monitoring you should get a tracer from otel.GetTracerProvider().Tracer(app.Name)
 

@@ -18,7 +18,15 @@ For monitoring you should get a tracer from otel.GetTracerProvider().Tracer(app.
 
 It returns the tracer that you set in setup stage ( in app directory ) 
 
-Then you define a span , with tracer.start() method . You give it a name and defer its cleaning method . 
+Then you define a span , with tracer.start() method . You give it a name and defer its cleaning method or use it any time that you are done with it . 
+
+### install
+for installing these methods libraries just import them , and then execute : 
+``` bash 
+go mod tidy
+```
+* don't use go get ... 
+
 
 ```go
 package cmd

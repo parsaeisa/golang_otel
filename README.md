@@ -138,3 +138,19 @@ So we have 4 methods :
 
 * UnaryServerInterceptor
 * StreamServerInterceptor
+
+Its so simple to use otel in repositories . ( like redis and sqlx ) 
+## Redis 
+All you need to do is below line : 
+```go
+a.RedisClient.AddHook(redisotel.NewTracingHook())
+```
+
+## Database 
+And for database : 
+```go
+db, err = otelsqlx.Open(config.C.Database.Driver, config.C.Database.DSN(), otelsql.WithAttributes(semconv.DBSystemMariaDB))
+if err != nil {
+	log.Fatalf("Cannot open database %s: %s", config.C.Database.String(), err)
+}
+```
